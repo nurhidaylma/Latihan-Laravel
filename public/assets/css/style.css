@@ -1,0 +1,13 @@
+.card {
+    margin : 10px;
+}
+
+.card-header{
+    font-weight: bold;
+    color: black;
+}
+
+img{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

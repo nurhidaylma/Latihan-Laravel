@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('index', 'MaskapaiController@index');
+
+Route::get('pegawai', function(){
+    return view('index2');
+});
+
+Route::get('create', function(){
+    return view('create');
+});
+
+Route::get('/delete/{id}', 'MaskapaiController@delete');
+Route::post('/store', 'MaskapaiController@store');
