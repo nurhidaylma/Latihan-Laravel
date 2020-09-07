@@ -8,6 +8,7 @@
         Daftar Rute Tersedia
         <a href="{{ url('create') }}" class="btn btn-dark float-right">Rute Baru</a>
     </h5>
+
     <div class="card-body">
         <table class="table table-sm datatable">
             <thead>
@@ -33,7 +34,7 @@
 					<td>{{ $totalPajak = $new_maskapai->pajak * $new_maskapai->harga}}</td>
 					<td>{{ $totalPajak + $new_maskapai->harga }}</td>
                     <td>
-                        <button class="btn btn-primary">Edit</button>                        
+						<a href="/index/edit/{{ $new_maskapai->id }}" class="btn btn-xs btn-primary">Edit</a>                                         
                         <a href="/delete/{{ $new_maskapai->id }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>

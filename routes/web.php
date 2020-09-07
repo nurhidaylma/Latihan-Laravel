@@ -29,3 +29,5 @@ Route::get('create', function(){
 
 Route::get('/delete/{id}', 'MaskapaiController@delete');
 Route::post('/store', 'MaskapaiController@store');
+Route::get('/index/edit/{id}', 'MaskapaiController@edit');
+Route::post('/index/update', 'MaskapaiController@update');

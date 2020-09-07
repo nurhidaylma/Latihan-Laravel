@@ -39,4 +39,30 @@ class MaskapaiController extends Controller
 
         return redirect('create');
     }
+
+    public function edit($id){
+        //mengambil data berdasarkan id yg dipilih
+        $edited =DB::table('maskapai')->where('id', $id)->first();
+
+        //passing data yg didapat ke edit.blade.php
+        return view('edit', compact('edited'));
+    }
+
+    public function update(Request $request){   
+        $maskapai = $request->input_nama;
+        $asal = $request->input_asal;
+        $tujuan = $request->input_tujuan;
+        $harga = $request->input_harga;
+        $pajak = $request->input_pajak;
+
+        DB::table('maskapai')->where('id', $request->id)->update([
+            'nama_maskapai' => $maskapai,
+            'bandara_asal' => $asal,
+            'bandara_tujuan' => $tujuan,
+            'harga' => $harga,
+            'pajak' => $pajak
+        ]);
+
+        return redirect('index');
+    }
 }

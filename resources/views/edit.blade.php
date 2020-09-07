@@ -14,10 +14,10 @@
 @section('content')
 <div class="card">
     <h5 class="card-header">
-        Pendaftaran Rute Penerbangan
+        Edit Rute Penerbangan
     </h5>
     <div class="card-body">
-        <form action="{{ url('store') }}" method="post">
+        <form action="{{ url ('/index/update') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="name">Nama Maskapai</label>
@@ -39,7 +39,7 @@
                 <label for="pajak">Pajak Bandara</label>
                 <input type="number" class="form-control" name="input_pajak" id="pajak" placeholder="Pajak Bandara" step="any">
             </div>
-            <button type="submit" class="btn btn-primary">Tambah</button>
+            <button type="submit" class="btn btn-primary">Update</button>
             <a href="{{ url('index') }}" class="btn btn-light">Batal</a>
         </form>
     </div>
