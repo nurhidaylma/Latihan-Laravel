@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Create Employee')
+@section('title', 'Buat Rute')
 
 @push('css')
 <link href="#"/>
